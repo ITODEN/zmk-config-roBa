@@ -63,12 +63,35 @@
             label = "TO_LAYER_0";
         };
 
-        LCtrl_Cbtn: LCtrl_Cbtn {
+        Ctrl_C: LCtrl_Cbtn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&macro_press>, <&kp C>;
 
             label = "LCTRL_CBTN";
+        };
+
+        to_layer_4: to_Layr_4j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 4>;
+            label = "TO_LAYR_4J";
+        };
+
+        ctrl_x: ctrl_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&macro_press>, <&kp X>;
+
+            label = "CTRL_X";
+        };
+
+        ctr_v: ctr_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&macro_press>, <&kp V>;
+
+            label = "CTR_V";
         };
     };
 
@@ -128,10 +151,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans     &trans       &trans               &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &kp LC(X)  &LCtrl_Cbtn  &kp LC(P)            &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans     &trans       &trans               &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans     &trans       &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans   &trans   &trans               &trans                      &trans  &trans    &trans    &trans    &trans
+&trans  &ctrl_x  &Ctrl_C  &ctr_v               &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans   &trans   &trans               &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans   &trans   &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
