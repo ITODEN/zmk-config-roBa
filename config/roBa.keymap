@@ -62,6 +62,14 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        LCtrl_Cbtn: LCtrl_Cbtn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&macro_press>, <&kp C>;
+
+            label = "LCTRL_CBTN";
+        };
     };
 
     behaviors {
@@ -120,10 +128,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans     &trans     &trans               &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &kp LC(X)  &kp LC(C)  &kp LC(P)            &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans     &trans     &trans               &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans     &trans     &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans     &trans       &trans               &trans                      &trans  &trans    &trans    &trans    &trans
+&trans  &kp LC(X)  &LCtrl_Cbtn  &kp LC(P)            &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans     &trans       &trans               &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans     &trans       &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
