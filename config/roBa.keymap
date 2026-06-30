@@ -66,7 +66,12 @@
         Ctrl_C: LCtrl_Cbtn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&macro_press>, <&kp C>;
+            bindings =
+                <&mkp MB1>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp C>;
 
             label = "LCTRL_CBTN";
         };
@@ -81,7 +86,12 @@
         ctrl_x: ctrl_x {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&macro_press>, <&kp X>;
+            bindings =
+                <&mkp MB1>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp X>;
 
             label = "CTRL_X";
         };
@@ -89,7 +99,12 @@
         ctr_v: ctr_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&macro_press>, <&kp V>;
+            bindings =
+                <&mkp MB1>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp V>;
 
             label = "CTR_V";
         };
@@ -97,9 +112,22 @@
         chrome_link_copy: chrome_link_copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp RCLK>, <&macro_press>, <&kp E>;
+            bindings =
+                <&mkp LCLK>,
+                <&macro_press>,
+                <&mkp RCLK>,
+                <&macro_press>,
+                <&kp E>;
 
             label = "CHROME_LINK_COPY";
+        };
+
+        ctrl_w: ctrl_w {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&macro_press>, <&kp W>;
+
+            label = "CTRL_W";
         };
     };
 
@@ -159,10 +187,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans   &trans   &trans               &trans                      &trans  &trans             &trans    &trans    &trans
-&trans  &ctrl_x  &Ctrl_C  &ctr_v               &trans  &trans      &trans  &trans  &mkp MB1           &mkp MB3  &mkp MB2  &trans
-&trans  &trans   &trans   &trans               &trans  &trans      &trans  &trans  &chrome_link_copy  &trans    &trans    &trans
-&trans  &trans   &trans   &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                         &trans
+&trans   &trans   &trans   &trans               &trans                      &trans  &trans             &trans    &trans    &trans
+&ctrl_w  &ctrl_x  &Ctrl_C  &ctr_v               &trans  &trans      &trans  &trans  &mkp MB1           &mkp MB3  &mkp MB2  &trans
+&trans   &trans   &trans   &trans               &trans  &trans      &trans  &trans  &chrome_link_copy  &trans    &trans    &trans
+&trans   &trans   &trans   &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                         &trans
             >;
         };
 
