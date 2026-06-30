@@ -93,6 +93,14 @@
 
             label = "CTR_V";
         };
+
+        chrome_link_copy: chrome_link_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp RCLK>, <&macro_press>, <&kp E>;
+
+            label = "CHROME_LINK_COPY";
+        };
     };
 
     behaviors {
@@ -151,10 +159,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans   &trans   &trans               &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &ctrl_x  &Ctrl_C  &ctr_v               &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans   &trans   &trans               &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans   &trans   &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans   &trans   &trans               &trans                      &trans  &trans             &trans    &trans    &trans
+&trans  &ctrl_x  &Ctrl_C  &ctr_v               &trans  &trans      &trans  &trans  &mkp MB1           &mkp MB3  &mkp MB2  &trans
+&trans  &trans   &trans   &trans               &trans  &trans      &trans  &trans  &chrome_link_copy  &trans    &trans    &trans
+&trans  &trans   &trans   &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                         &trans
             >;
         };
 
