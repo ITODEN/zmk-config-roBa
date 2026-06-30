@@ -63,7 +63,7 @@
             label = "TO_LAYER_0";
         };
 
-        Ctrl_C: LCtrl_Cbtn {
+        copy: LCtrl_Cbtn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -83,7 +83,7 @@
             label = "TO_LAYR_4J";
         };
 
-        ctrl_x: ctrl_x {
+        cut: ctrl_x {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -96,7 +96,7 @@
             label = "CTRL_X";
         };
 
-        ctr_v: ctr_v {
+        paset: ctr_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -109,7 +109,7 @@
             label = "CTR_V";
         };
 
-        chrome_link_copy: chrome_link_copy {
+        web_link_copy: chrome_link_copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -122,12 +122,19 @@
             label = "CHROME_LINK_COPY";
         };
 
-        ctrl_w: ctrl_w {
+        close_tab: ctrl_w {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&macro_press>, <&kp W>;
 
             label = "CTRL_W";
+        };
+
+        open_new_tab: open_new_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_SHIFT &mkp MB1>;
+            label = "OPEN_NEW_TAB";
         };
     };
 
@@ -187,10 +194,10 @@
 
         MOUSE {
             bindings = <
-&trans   &trans   &trans   &trans               &trans                      &trans  &trans             &trans    &trans    &trans
-&ctrl_w  &ctrl_x  &Ctrl_C  &ctr_v               &trans  &trans      &trans  &trans  &mkp MB1           &mkp MB3  &mkp MB2  &trans
-&trans   &trans   &trans   &trans               &trans  &trans      &trans  &trans  &chrome_link_copy  &trans    &trans    &trans
-&trans   &trans   &trans   &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                         &trans
+&trans      &trans  &trans  &trans               &trans                      &trans         &trans          &trans    &trans    &trans
+&close_tab  &cut    &copy   &paset               &trans  &trans      &trans  &open_new_tab  &mkp MB1        &mkp MB3  &mkp MB2  &trans
+&trans      &trans  &trans  &trans               &trans  &trans      &trans  &trans         &web_link_copy  &trans    &trans    &trans
+&trans      &trans  &trans  &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                             &trans
             >;
         };
 
