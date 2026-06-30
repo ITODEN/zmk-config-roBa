@@ -133,7 +133,8 @@
         open_new_tab: open_new_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_SHIFT &mkp MB1>;
+            bindings = <&mkp MB1>, <&macro_press>, <&kp LEFT_SHIFT &kp LCTRL>;
+
             label = "OPEN_NEW_TAB";
         };
     };
