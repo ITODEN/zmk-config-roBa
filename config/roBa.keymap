@@ -63,79 +63,11 @@
             label = "TO_LAYER_0";
         };
 
-        copy: LCtrl_Cbtn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&mkp MB1>,
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_press>,
-                <&kp C>;
-
-            label = "LCTRL_CBTN";
-        };
-
         to_layer_4: to_Layr_4j {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 4>;
             label = "TO_LAYR_4J";
-        };
-
-        cut: ctrl_x {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&mkp MB1>,
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_press>,
-                <&kp X>;
-
-            label = "CTRL_X";
-        };
-
-        paset: ctr_v {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&mkp MB1>,
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_press>,
-                <&kp V>;
-
-            label = "CTR_V";
-        };
-
-        web_link_copy: chrome_link_copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&mkp LCLK>,
-                <&macro_press>,
-                <&mkp RCLK>,
-                <&macro_press>,
-                <&kp E>;
-
-            label = "CHROME_LINK_COPY";
-        };
-
-        close_tab: ctrl_w {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&macro_press>, <&kp W>;
-
-            label = "CTRL_W";
-        };
-
-        open_new_tab: open_new_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1>, <&macro_press>, <&kp LEFT_SHIFT &kp LCTRL>;
-
-            label = "OPEN_NEW_TAB";
         };
     };
 
@@ -195,10 +127,10 @@
 
         MOUSE {
             bindings = <
-&trans      &trans  &trans  &trans               &trans                      &trans         &trans          &trans    &trans    &trans
-&close_tab  &cut    &copy   &paset               &trans  &trans      &trans  &open_new_tab  &mkp MB1        &mkp MB3  &mkp MB2  &trans
-&trans      &trans  &trans  &trans               &trans  &trans      &trans  &trans         &web_link_copy  &trans    &trans    &trans
-&trans      &trans  &trans  &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                             &trans
+&trans              &trans     &trans     &trans               &trans                      &trans  &trans    &trans    &trans    &trans
+&kp LEFT_WIN        &kp LC(C)  &kp LC(X)  &kp LC(P)            &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&kp LG(LEFT_SHIFT)  &trans     &trans     &trans               &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans              &trans     &trans     &mt ESCAPE LEFT_ALT  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
