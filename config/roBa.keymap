@@ -127,10 +127,10 @@
 
         MOUSE {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                          &kp LC(T)        &trans     &mkp MB3   &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &kp LC(V)  &kp LC(LS(TAB))  &mkp MB1   &mkp MB2   &trans  &kp LC(TAB)
-&kp LEFT_SHIFT  &kp LS(LG(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &kp LC(C)  &kp LC(W)        &kp LC(T)  &kp LC(W)  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans     &trans                                         &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                          &kp LC(T)        &trans     &mkp MB3   &trans     &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &kp LC(V)  &kp LC(LS(TAB))  &mkp MB1   &mkp MB2   &kp RC(V)  &kp LC(TAB)
+&kp LEFT_SHIFT  &kp LS(LG(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &kp LC(C)  &kp LC(W)        &kp LC(T)  &kp LC(W)  &kp LC(C)  &kp LC(X)
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans     &trans                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
