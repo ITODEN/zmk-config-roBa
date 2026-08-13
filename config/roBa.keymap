@@ -87,10 +87,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                 &kp T                                                                      &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                 &kp G                 &kp ESCAPE                      &kp MINUS            &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                 &kp NUMBER_1                    &kp EQUAL            &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 5 LC(SPACE)      &mt LCTRL BACKSPACE  &lt 2 ENTER                             &kp LA(GRAVE)
+&kp Q             &kp W         &kp E         &kp R                 &kp T                                                            &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                 &kp G                 &kp ESCAPE            &kp MINUS            &kp H        &kp J  &kp K      &kp L    &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                 &kp NUMBER_1          &kp EQUAL            &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 F10  &mt LEFT_SHIFT SPACE  &lt 5 INT_HENKAN      &mt LCTRL BACKSPACE  &lt 2 ENTER                             &kp LA(GRAVE)
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -138,10 +138,10 @@
 
         SCROLL {
             bindings = <
-&trans  &kp LS(LC(TAB))         &trans          &kp LS(TAB)              &trans                                                              &trans          &trans    &trans    &trans  &trans
-&trans  &kp LEFT_ARROW          &kp LA(ESCAPE)  &kp RIGHT_ARROW          &kp PAGE_DOWN  &trans                          &trans               &trans          &mkp MB1  &mkp MB2  &trans  &trans
-&trans  &kp LS(LG(LEFT_ARROW))  &trans          &kp LS(LG(RIGHT_ARROW))  &kp PAGE_UP    &trans                          &trans               &trans          &trans    &trans    &trans  &trans
-&trans  &trans                  &trans          &trans                   &trans         &lt_to_layer_0 0 LC(SPACE)      &kp INTERNATIONAL_5  &kp INT_HENKAN                              &trans
+&trans  &kp LS(LC(TAB))         &kp UP_ARROW    &kp LS(TAB)              &trans                                          &trans          &trans    &trans    &trans  &trans
+&trans  &kp LEFT_ARROW          &kp LA(ESCAPE)  &kp RIGHT_ARROW          &kp PAGE_DOWN  &trans      &trans               &trans          &mkp MB1  &mkp MB2  &trans  &trans
+&trans  &kp LS(LG(LEFT_ARROW))  &kp DOWN        &kp LS(LG(RIGHT_ARROW))  &kp PAGE_UP    &trans      &trans               &trans          &trans    &trans    &trans  &trans
+&trans  &trans                  &trans          &trans                   &lt 6 SPACE    &trans      &kp INTERNATIONAL_5  &kp INT_HENKAN                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
