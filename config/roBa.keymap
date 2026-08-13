@@ -139,8 +139,8 @@
         SCROLL {
             bindings = <
 &trans  &kp LS(LC(TAB))         &kp UP_ARROW    &kp LS(TAB)              &trans                                          &trans          &trans    &trans    &trans  &trans
-&trans  &kp LEFT_ARROW          &kp LA(ESCAPE)  &kp RIGHT_ARROW          &kp PAGE_DOWN  &trans      &trans               &trans          &mkp MB1  &mkp MB2  &trans  &trans
-&trans  &kp LS(LG(LEFT_ARROW))  &kp DOWN        &kp LS(LG(RIGHT_ARROW))  &kp PAGE_UP    &trans      &trans               &trans          &trans    &trans    &trans  &trans
+&trans  &kp LEFT_ARROW          &kp LA(ESCAPE)  &kp RIGHT_ARROW          &kp PAGE_UP    &trans      &trans               &trans          &mkp MB1  &mkp MB2  &trans  &trans
+&trans  &kp LS(LG(LEFT_ARROW))  &kp DOWN        &kp LS(LG(RIGHT_ARROW))  &kp PAGE_DOWN  &trans      &trans               &trans          &trans    &trans    &trans  &trans
 &trans  &trans                  &trans          &trans                   &lt 6 SPACE    &trans      &kp INTERNATIONAL_5  &kp INT_HENKAN                              &trans
             >;
 
